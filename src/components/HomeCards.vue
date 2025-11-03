@@ -1,6 +1,6 @@
 <script setup>
-import { RouterLink } from 'vue-router';
-import Card from '@/components/Card.vue';
+import { RouterLink } from "vue-router";
+import Card from "@/components/Card.vue";
 </script>
 
 <template>
@@ -8,9 +8,9 @@ import Card from '@/components/Card.vue';
     <div class="container-xl lg:container m-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
         <Card>
-          <h2 class="text-2xl font-bold">For Developers</h2>
+          <h2 class="text-2xl font-bold">For Interested Applicants</h2>
           <p class="mt-2 mb-4">
-            Browse our Vue jobs and start your career today
+            Browse our open positions and start your career today
           </p>
           <RouterLink
             to="/jobs"
@@ -20,9 +20,9 @@ import Card from '@/components/Card.vue';
           </RouterLink>
         </Card>
         <Card bg="bg-green-100">
-          <h2 class="text-2xl font-bold">For Employers</h2>
+          <h2 class="text-2xl font-bold">For Personnel Staff</h2>
           <p class="mt-2 mb-4">
-            List your job to find the perfect developer for the role
+            List available open positions to find the best candidates
           </p>
           <RouterLink
             to="/jobs/add"
