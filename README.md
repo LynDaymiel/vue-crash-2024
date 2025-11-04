@@ -1,8 +1,6 @@
-# Vue Jobs Project (YouTube)
+# Modules 1.1
 
-This is the jobs listing project from the [YouTube crash course](https://www.youtube.com/watch?v=VeNfHj6MhgA).
-
-<img src="public/screen.png" />
+<img src="public/screenS.png" />
 
 ## Usage
 
