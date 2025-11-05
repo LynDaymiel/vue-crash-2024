@@ -1,25 +1,25 @@
 <script setup>
-import router from '@/router';
-import { reactive, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import { useToast } from 'vue-toastification';
-import axios from 'axios';
+import router from "@/router";
+import { reactive, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { useToast } from "vue-toastification";
+import axios from "axios";
 
 const route = useRoute();
 
 const jobId = route.params.id;
 
 const form = reactive({
-  type: 'Full-Time',
-  title: '',
-  description: '',
-  salary: '',
-  location: '',
+  type: "Full-Time",
+  title: "",
+  description: "",
+  salary: "",
+  location: "",
   company: {
-    name: '',
-    description: '',
-    contactEmail: '',
-    contactPhone: '',
+    name: "",
+    description: "",
+    contactEmail: "",
+    contactPhone: "",
   },
 });
 
@@ -47,11 +47,11 @@ const handleSubmit = async () => {
 
   try {
     const response = await axios.put(`/api/jobs/${jobId}`, updatedJob);
-    toast.success('Job Updated Successfully');
+    toast.success("Job Updated Successfully");
     router.push(`/jobs/${response.data.id}`);
   } catch (error) {
-    console.error('Error fetching job', error);
-    toast.error('Job Was Not Added');
+    console.error("Error fetching job", error);
+    toast.error("Job Was Not Added");
   }
 };
 
@@ -70,7 +70,7 @@ onMounted(async () => {
     form.company.contactEmail = state.job.company.contactEmail;
     form.company.contactPhone = state.job.company.contactPhone;
   } catch (error) {
-    console.error('Error fetching job', error);
+    console.error("Error fetching job", error);
   } finally {
     state.isLoading = false;
   }
@@ -114,7 +114,7 @@ onMounted(async () => {
               id="name"
               name="name"
               class="border rounded w-full py-2 px-3 mb-2"
-              placeholder="eg. Beautiful Apartment In Miami"
+              placeholder="eg. Teacher III"
               required
             />
           </div>
